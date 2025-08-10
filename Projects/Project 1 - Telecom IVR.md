@@ -9,7 +9,7 @@ config:
   look: handDrawn
 ---
 flowchart TD
-    A(["Welcome to Vodafone IVR"]) --> A1(["Please select a language"])
+    A(["Welcome to Vodafone IVR"]) --> A1["Languages Menu"]
     A1 --> L1[/"1 - Arabic"/] & L2[/"2 - English"/]
 
     L1 --> V{"Check if VIP?"}
@@ -22,16 +22,16 @@ flowchart TD
     C1 --> D1(["Your phone number is"])
     D1 --> Z(["Thank you for calling Vodafone!"])
 
-    C2 --> E1(["Enter the amount to recharge"])
-    E1 --> E2(["Enter your credit card number"])
-    E2 --> E3(["Enter the card expiry date"])
-    E3 --> E4(["Enter the card security code"])
+    C2 --> E1[["Enter the amount to recharge"]]
+    E1 --> E2[["Enter your credit card number"]]
+    E2 --> E3[["Enter the card expiry date"]]
+    E3 --> E4[["Enter the card security code"]]
     E4 --> RS(["Balance recharge successful"]) --> Z
 
-    C3 --> H1["Other Services"]
+    C3 --> H1["Other Services Menu"]
     H1 --> I1[/"1 - Balance Transfer"/] & I2[/"2 - Internet Packages"/] & I3[/"3 - Call Tone Services"/] & I4[/"4 - Promotions and Offers"/]
-    I1 --> BT1(["Enter the number to transfer balance to"])
-    BT1 --> BT2(["Enter amount to transfer"])
+    I1 --> BT1[["Enter the number to transfer balance to"]]
+    BT1 --> BT2[["Enter amount to transfer"]]
     BT2 --> BT3(["Balance transferred successfully"]) --> Z
     I2 --> IS(["Internet packages have been sent via SMS"]) --> Z
     I3 --> CS(["Call tone options have been sent via SMS"]) --> Z
