@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1822090202:1754990016417" name="Check Is Open" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Check Is Open" default_exit_state="closed">
+        <exit_state name="open" conjugate="and">
+            <boolean check_existence="no" value="true">
+                <data>
+                    <session name="IsOpen" />
+                </data>
+            </boolean>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>
