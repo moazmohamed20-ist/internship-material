@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<voice_element id="Element@1545398370:1754989470306" name="Enter Order Number" version="6.0.1">
+<voice_element id="Element@1025470052:1754989354937" name="Main Menu" version="6.0.1">
 <config>
 <settings>
-<setting name="inputmode">both</setting>
 <setting name="noinput_timeout">5s</setting>
 <setting name="max_noinput_count">3</setting>
 <setting name="max_nomatch_count">3</setting>
-<setting name="digits_confidence_level">0.40</setting>
-<setting name="min_digit">4</setting>
-<setting name="max_digit">4</setting>
+<setting name="confidence_level">0.40</setting>
 <setting name="modal">false</setting>
-<setting name="secure_logging">false</setting>
-<setting name="maxnbest">1</setting>
-<setting name="dtmf_overlay">false</setting>
+<setting name="option1_dtmf">1</setting>
+<setting name="option1_voice"/>
+<setting name="option1_value">agent</setting>
+<setting name="option2_dtmf">2</setting>
+<setting name="option2_voice"/>
+<setting name="option2_value">order</setting>
+<setting name="option3_dtmf">3</setting>
+<setting name="option3_voice"/>
+<setting name="option3_value">track</setting>
 </settings>
 <audio>
 <audio_group barge_in="true" count="1" name="initial_audio_group">
 <audio_item name="audio item 1" type="static">
 <audio_item_notes/>
 <audio_item_config view_id="default">
-<static default_audio_path="true" uri=""><![CDATA[Please enter your 4-digit order number.]]></static>
+<static default_audio_path="true" uri="MainMenu.wav"/>
 </audio_item_config>
 </audio_item>
 </audio_group>
@@ -27,7 +30,7 @@
 <audio_item name="audio item 1" type="static">
 <audio_item_notes/>
 <audio_item_config view_id="default">
-<static default_audio_path="true" uri=""><![CDATA[Sorry, that is not a valid option.]]></static>
+<static default_audio_path="true" uri="NoMatch.wav"/>
 </audio_item_config>
 </audio_item>
 </audio_group>
@@ -35,7 +38,7 @@
 <audio_item name="audio item 1" type="static">
 <audio_item_notes/>
 <audio_item_config view_id="default">
-<static default_audio_path="true" uri=""><![CDATA[Sorry, we did not receive any input.]]></static>
+<static default_audio_path="true" uri="NoInput.wav"/>
 </audio_item_config>
 </audio_item>
 </audio_group>

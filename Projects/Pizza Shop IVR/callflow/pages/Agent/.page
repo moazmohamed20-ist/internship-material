@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@442949599:1755070829721" name="Agent" version="6.0.1">
+<element height="46" id="Element@970927525:1755070829722" name="Agent" type="Page Entry" width="82" x="296" y="30">
+<exit_states>
+<exit_state name="next" target="Element@1655890715:1755070849828"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1655890715:1755070849828" name="Transfer To Agent" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="141" x="267" y="150">
+<exit_states>
+<exit_state name="done" target="Element@1823745986:1755070849828"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1823745986:1755070849828" type="Hang Up" width="97" x="289" y="258"/>
+</page>

@@ -6,12 +6,12 @@
 <setting name="language"/>
 <setting name="voice_name"/>
 <setting name="encoding"/>
-<setting name="default_audio_path"/>
+<setting name="default_audio_path">http://localhost/Pizza Shop IVR</setting>
 <setting name="remove_session_data"/>
 </settings>
 <session_data>
 <data create_when="Before" name="IsOpen">true</data>
-<data create_when="Before" name="TimeToPrepare">15</data>
+<data create_when="Before" name="TimeToPrepare">13</data>
 </session_data>
 </config>
 </action_element>

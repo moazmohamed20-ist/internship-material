@@ -6,8 +6,13 @@
 <audio_item name="audio item 1" type="static">
 <audio_item_notes/>
 <audio_item_config view_id="default">
-<static default_audio_path="true" uri=""><![CDATA[Welcome to Tony’s Pizza.
-]]></static>
+<static default_audio_path="true" uri="ar/Welcome.wav"/>
+</audio_item_config>
+</audio_item>
+<audio_item name="audio item 2" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri="en/Welcome.wav"/>
 </audio_item_config>
 </audio_item>
 </audio_group>

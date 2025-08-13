@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@987630911:1755069705908" name="MaxTries" version="6.0.1">
+<element height="46" id="Element@447148185:1755069705908" name="MaxTries" type="Page Entry" width="96" x="300" y="30">
+<exit_states>
+<exit_state name="next" target="Element@655284321:1755069738502"/>
+</exit_states>
+</element>
+<element height="46" id="Element@655284321:1755069738502" name="MaxTries" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="96" x="300" y="124">
+<exit_states>
+<exit_state name="done" target="Element@1472602350:1755069798055"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1472602350:1755069798055" type="Hang Up" width="97" x="299" y="218"/>
+</page>

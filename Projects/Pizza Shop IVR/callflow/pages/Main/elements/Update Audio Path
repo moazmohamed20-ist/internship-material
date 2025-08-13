@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@432905353:1755073014212" name="Update Audio Path" version="6.0.1">
+<config>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="voice_name"/>
+<setting name="encoding"/>
+<setting name="default_audio_path">http://localhost/Pizza Shop IVR/{Data.Element.Lang Menu.value}</setting>
+<setting name="remove_session_data"/>
+</settings>
+</config>
+</action_element>

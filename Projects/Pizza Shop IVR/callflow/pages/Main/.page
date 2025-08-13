@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1132162722:1754989333661" name="Main" version="6.0.1">
+<element height="46" id="Element@1195700882:1754989333661" name="Start Of Call" start_of_call="true" type="Page Entry" width="113" x="253" y="-43">
+<exit_states>
+<exit_state name="next" target="Element@81140578:1754991409001"/>
+</exit_states>
+</element>
+<element height="46" id="Element@116819436:1754989347050" name="Welcome" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="100" x="259" y="144">
+<exit_states>
+<exit_state name="done" target="Element@1010602617:1755072150583"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1025470052:1754989354937" name="Main Menu" src="com.audium.server.voiceElement.menu.MFoundation3OptionMenu" type="Voice Element" width="151" x="234" y="392">
+<exit_states>
+<exit_state name="option1" target="Element@825039212:1755070874577"/>
+<exit_state name="option2" target="Element@1822090202:1754990016417"/>
+<exit_state name="option3" target="Element@1545398370:1754989470306"/>
+<exit_state name="max_nomatch" target="Element@400844645:1755069828062"/>
+<exit_state name="max_noinput" target="Element@400844645:1755069828062"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1545398370:1754989470306" name="Enter Order Number" src="com.audium.server.voiceElement.digit.MBasicDigit" type="Voice Element" width="167" x="525" y="622">
+<exit_states>
+<exit_state name="done" target="Element@1970994616:1754989637146"/>
+<exit_state name="max_nomatch" target="Element@39831770:1755069876120"/>
+<exit_state name="max_noinput" target="Element@39831770:1755069876120"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1598633956:1754989554199" name="Preparing Order" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="134" x="140" y="622">
+<exit_states>
+<exit_state name="done" target="Element@1734252862:1754989685399"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1970994616:1754989637146" name="Order On The Way" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="147" x="530" y="730">
+<exit_states>
+<exit_state name="done" target="Element@1734252862:1754989685399"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1734252862:1754989685399" name="Thank" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="99" x="260" y="815">
+<exit_states>
+<exit_state name="done" target="Element@2029073842:1754989710262"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2029073842:1754989710262" type="Hang Up" width="97" x="261" y="908"/>
+<element height="46" id="Element@115777436:1754989981916" name="Closed" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="99" x="375" y="622">
+<exit_states>
+<exit_state name="done" target="Element@1734252862:1754989685399"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1822090202:1754990016417" name="Check Is Open" type="Decision" width="126" x="246" y="518">
+<exit_states>
+<exit_state name="open" target="Element@1598633956:1754989554199"/>
+<exit_state name="closed" target="Element@115777436:1754989981916"/>
+</exit_states>
+</element>
+<element height="46" id="Element@81140578:1754991409001" name="Initialization" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="114" x="252" y="53">
+<exit_states>
+<exit_state name="done" target="Element@116819436:1754989347050"/>
+</exit_states>
+</element>
+<element height="46" id="Element@400844645:1755069828062" name="MaxTries" type="Page Connector" width="96" x="481" y="390">
+<page_connector target="Element@447148185:1755069705908">MaxTries<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@39831770:1755069876120" name="MaxTries" type="Page Connector" width="96" x="799" y="622">
+<page_connector target="Element@447148185:1755069705908">MaxTries<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@825039212:1755070874577" name="Agent" type="Page Connector" width="82" x="84" y="518">
+<page_connector target="Element@970927525:1755070829722">Agent<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1010602617:1755072150583" name="Lang Menu" src="com.audium.server.voiceElement.menu.MFoundation2OptionMenu" type="Voice Element" width="120" x="249" y="228">
+<exit_states>
+<exit_state name="option1" target="Element@432905353:1755073014212">
+<bendpoint>
+<dim1 x="-35" y="49"/>
+<dim2 x="-35" y="-42"/>
+</bendpoint>
+</exit_state>
+<exit_state name="option2" target="Element@432905353:1755073014212">
+<bendpoint>
+<dim1 x="39" y="47"/>
+<dim2 x="39" y="-44"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_nomatch" target="Element@605819221:1755079699250">
+<bendpoint>
+<dim1 x="145" y="26"/>
+<dim2 x="-116" y="26"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_noinput" target="Element@605819221:1755079699250">
+<bendpoint>
+<dim1 x="142" y="-28"/>
+<dim2 x="-119" y="-28"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@432905353:1755073014212" name="Update Audio Path" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="150" x="234" y="319">
+<exit_states>
+<exit_state name="done" target="Element@1025470052:1754989354937"/>
+</exit_states>
+</element>
+<element height="46" id="Element@605819221:1755079699250" name="Default To Arabic" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="140" x="524" y="228">
+<exit_states>
+<exit_state name="done" target="Element@432905353:1755073014212"/>
+</exit_states>
+</element>
+</page>
