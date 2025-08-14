@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@49671098:1755167001375" name="Thank" version="6.0.1">
+<element height="46" id="Element@1953932469:1755167001375" name="Thank" type="Page Entry" width="82" x="312" y="30">
+<exit_states>
+<exit_state name="next" target="Element@712903570:1755167022124"/>
+</exit_states>
+</element>
+<element height="46" id="Element@712903570:1755167022124" name="Thank" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="82" x="312" y="135">
+<exit_states>
+<exit_state name="done" target="Element@1899931939:1755167022124"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1899931939:1755167022124" type="Hang Up" width="97" x="304" y="228"/>
+</page>

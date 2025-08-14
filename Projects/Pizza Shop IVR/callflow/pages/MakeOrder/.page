@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@295035829:1755167077090" name="MakeOrder" version="6.0.1">
+<element height="46" id="Element@966120264:1755167077090" name="MakeOrder" type="Page Entry" width="109" x="300" y="30">
+<exit_states>
+<exit_state name="next" target="Element@2046462203:1755167105495"/>
+</exit_states>
+</element>
+<element height="46" id="Element@766500841:1755167105496" name="Order Created" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="134" x="155" y="514">
+<exit_states>
+<exit_state name="done" target="Element@1144825146:1755167140716"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2046462203:1755167105495" name="Get Shop Status" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="133" x="288" y="121">
+<exit_states>
+<exit_state name="done" target="Element@2061492998:1755167105495"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1173870335:1755167105495" name="Closed" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="99" x="304" y="325">
+<exit_states>
+<exit_state name="done" target="Element@1144825146:1755167140716"/>
+</exit_states>
+</element>
+<element height="46" id="Element@4141637:1755167105495" name="Extract Order Num" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="149" x="148" y="415">
+<exit_states>
+<exit_state name="done" target="Element@766500841:1755167105496"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2063881204:1755167105495" name="Create Order" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="117" x="164" y="325">
+<exit_states>
+<exit_state name="done" target="Element@4141637:1755167105495"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2061492998:1755167105495" name="Check Is Open" type="Decision" width="136" x="286" y="221">
+<exit_states>
+<exit_state name="open" target="Element@2063881204:1755167105495"/>
+<exit_state name="closed" target="Element@1173870335:1755167105495"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1144825146:1755167140716" name="Thank" type="Page Connector" width="82" x="313" y="602">
+<page_connector target="Element@1953932469:1755167001375">Thank<config/>
+</page_connector>
+</element>
+</page>
