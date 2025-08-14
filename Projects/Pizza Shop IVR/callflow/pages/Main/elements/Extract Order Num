@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@353491563:1755158444061" name="Extract Order Num" version="6.0.1">
+<config>
+<settings>
+<setting name="OrderNum">var response = JSON.parse({Data.Element.Create Order.response_body});
+response['orderNumber'];</setting>
+</settings>
+</config>
+</action_element>

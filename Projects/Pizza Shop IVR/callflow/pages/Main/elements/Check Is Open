@@ -4,11 +4,12 @@
 <source type="Decision Editor"><![CDATA[<knowledge_base>
     <rule name="Check Is Open" default_exit_state="closed">
         <exit_state name="open" conjugate="and">
-            <boolean check_existence="no" value="true">
+            <string operator="equal">
                 <data>
-                    <session name="IsOpen" />
+                    <element name="Get Shop Status" variable="response_body" />
                 </data>
-            </boolean>
+                <constant_string value="open" />
+            </string>
         </exit_state>
     </rule>
 </knowledge_base>]]></source>

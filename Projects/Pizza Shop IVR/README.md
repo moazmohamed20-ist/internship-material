@@ -20,18 +20,16 @@ flowchart TD
     O1 --> P4(["Transferring you to an agent"])
 
     %% Order Pizza Branch
-    O2 --> D{"Is shop open?"}
-    D -- Yes --> P1(["Your order will be ready in 20 minutes"])
-    D -- No --> P2(["Sorry, we are closed now"])
+    O2 --> D1{"Is shop open?"}
+    D1 -- Yes --> P1(["Your order created with number _XXXX_"]) --> Z
+    D1 -- No --> P2(["Sorry, we are closed now"]) --> Z
 
     %% Track Order Branch with Input
     O3 --> I1[["Please enter your 4-digit order number"]]
-    I1 --> P3(["Your order is on the way"])
-
-    %% End
-    P1 --> Z(["Thank you for calling Tony's Pizza!"])
-    P2 --> Z
-    P3 --> Z
+    I1 --> D2{"Check time left"}
+    D2 -- \> 5 --> P5(["Your order will be ready in _X_ minutes"]) --> Z(["Thank you for calling Tony's Pizza!"])
+    D2 -- \> 0 --> P6(["Your order is on the way"]) --> Z
+    D2 -- = 0 --> P7(["Your order has been delivered"]) --> Z
 ```
 
 ## Prompt Matrix
@@ -48,5 +46,8 @@ flowchart TD
 | OrderOnTheWay.wav       | Your order is on the way.                                                             | طلبك في الطريق.                                                                   |
 | ShopClosed.wav          | Sorry, we are closed now.                                                             | نأسف، نحن مغلقون حالياً.                                                          |
 | EnterOrderNumber.wav    | Please enter your 4-digit order number.                                               | يرجى إدخال رقم طلبك المكون من 4 أرقام.                                            |
-| OrderConfirmed.wav      | Your order will be ready in 20 minutes.                                               | طلبك سيكون جاهزاً خلال 20 دقيقة.                                                  |
+| OrderCreated.wav        | Your order has been created with number                                               | تم إنشاء طلبك بالرقم                                                              |
+| WillBeReadyIn.wav       | It will be ready in                                                                   | سيكون جاهزاً خلال                                                                 |
+| Minutes.wav             | minutes                                                                               | دقائق                                                                             |
+| OrderDelivered.wav      | Your order has been delivered.                                                        | تم توصيل طلبك.                                                                    |
 | ThankYou.wav            | Thank you for calling Tony’s Pizza!                                                   | شكراً لاتصالك ببيتزا توني!                                                        |

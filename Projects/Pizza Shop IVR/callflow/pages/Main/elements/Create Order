@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@532607988:1755158093856" name="Create Order" version="6.0.1">
+<config>
+<settings>
+<setting name="EndpointURL">http://localhost:8080/order</setting>
+<setting name="HTTPMethod">POST</setting>
+<setting name="Parameters"/>
+<setting name="ignoreCertificateValidation">true</setting>
+<setting name="requireHttpAuthentication">false</setting>
+<setting name="headers">'Content-Type':'application/json'</setting>
+<setting name="body"/>
+<setting name="useProxy">false</setting>
+<setting name="connectTimeout">3000</setting>
+<setting name="readTimeout">5000</setting>
+</settings>
+</config>
+</action_element>

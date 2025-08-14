@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1330894467:1755159130974" name="Get Order Time Left" version="6.0.1">
+<config>
+<settings>
+<setting name="EndpointURL">http://localhost:8080/order/{Data.Element.Enter Order Number.value}</setting>
+<setting name="HTTPMethod">GET</setting>
+<setting name="Parameters"/>
+<setting name="ignoreCertificateValidation">true</setting>
+<setting name="requireHttpAuthentication">false</setting>
+<setting name="headers">'Content-Type':'application/json'</setting>
+<setting name="useProxy">false</setting>
+<setting name="xpathexpression">$.timeLeft</setting>
+<setting name="connectTimeout">3000</setting>
+<setting name="readTimeout">5000</setting>
+</settings>
+</config>
+</action_element>
