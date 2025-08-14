@@ -1,4 +1,4 @@
-# Project 1: Telecom IVR
+# Telecom IVR
 
 ## Diagram
 

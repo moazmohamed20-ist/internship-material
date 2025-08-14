@@ -1,4 +1,4 @@
-# Project 0: Pizza Shop IVR
+# Pizza Shop IVR
 
 ## Diagram
 

@@ -1,4 +1,4 @@
-# Project 0: Pizza Shop API
+# Pizza Shop API
 
 ## 1. Shop Status - `GET /check-status`
 
