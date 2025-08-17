@@ -6,7 +6,7 @@
 <setting name="language"/>
 <setting name="voice_name"/>
 <setting name="encoding"/>
-<setting name="default_audio_path">http://localhost/Pizza Shop IVR/ar</setting>
+<setting name="default_audio_path">http://localhost/Pizza%20Shop%20IVR/ar</setting>
 <setting name="remove_session_data"/>
 </settings>
 </config>
