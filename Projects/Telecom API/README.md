@@ -117,7 +117,7 @@ An endpoint to send SMS messages based on predefined templates.
 ```json
 {
   "phoneNumber": "01234567890",
-  "tempelateCode": "INTERNET_PACKAGES"
+  "templateCode": "INTERNET_PACKAGES"
 }
 ```
 
