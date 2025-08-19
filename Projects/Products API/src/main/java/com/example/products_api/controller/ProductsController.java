@@ -1,8 +1,8 @@
-package com.example.products_api;
+package com.example.products_api.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,45 +12,39 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-public class Controller {
+import com.example.products_api.entity.Product;
+import com.example.products_api.repository.ProductsRepo;
 
-  private List<Product> products = new ArrayList<>();
+@RestController
+public class ProductsController {
+
+  @Autowired
+  private ProductsRepo productsRepo;
 
   @GetMapping("/products")
   public List<Product> getAll() {
-    return products;
+    return productsRepo.findAll();
   }
 
   @PostMapping("/products")
   public ResponseEntity<Void> addNewProduct(@RequestBody Product p) {
     // Add new product to the list
-    products.add(p);
+    productsRepo.save(p);
     return ResponseEntity.status(201).build();
   }
 
   @GetMapping("/products/{id}")
   public ResponseEntity<Product> getById(@PathVariable int id) {
-    // Find product by id, then return it
-    for (int i = 0; i < products.size(); i++) {
-      Product p = products.get(i);
-      if (p.getId() == id)
-        return ResponseEntity.ok(p);
-    }
-
-    // Product not found
-    return ResponseEntity.status(404).build();
+    return ResponseEntity.of(productsRepo.findById(id));
   }
 
   @DeleteMapping("/products/{id}")
   public ResponseEntity<Void> deleteById(@PathVariable int id) {
-    // Find product by id, then delete it
-    for (int i = 0; i < products.size(); i++) {
-      Product p = products.get(i);
-      if (p.getId() == id) {
-        products.remove(i);
-        return ResponseEntity.status(204).build();
-      }
+    Product p = productsRepo.findById(id).orElse(null);
+
+    if (p != null) {
+      productsRepo.deleteById(id);
+      return ResponseEntity.noContent().build();
     }
 
     // Product not found
@@ -59,16 +53,13 @@ public class Controller {
 
   @PutMapping("/products/{id}")
   public ResponseEntity<Void> updateById(@PathVariable int id, @RequestBody Product newProduct) {
-    // Find product by id, then update it
-    for (int i = 0; i < products.size(); i++) {
-      Product p = products.get(i);
-      if (p.getId() == id) {
+    Product p = productsRepo.findById(id).orElse(null);
 
-        p.setName(newProduct.getName());
-        p.setPrice(newProduct.getPrice());
-
-        return ResponseEntity.ok().build();
-      }
+    if (p != null) {
+      p.setName(newProduct.getName());
+      p.setPrice(newProduct.getPrice());
+      productsRepo.save(p);
+      return ResponseEntity.ok().build();
     }
 
     // Product not found
